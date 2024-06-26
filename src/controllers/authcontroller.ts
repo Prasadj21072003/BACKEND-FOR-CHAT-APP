@@ -50,12 +50,12 @@ export const login = async (req: Request, res: Response) => {
   const { username, password } = req.body;
   const user = await prisma.user.findUnique({ where: { username } });
   if (!user) {
-    return console.log("User not found");
+    return res.json("User not found");
   }
   const ispasswordcorrect = await bcryptjs.compare(password, user.password);
 
   if (!ispasswordcorrect) {
-    return console.log("Password is not correct");
+    return res.json("Password is not correct");
   }
 
   const acesstoken = jwt.sign({ id: user.id }, process.env.JWT_KEY as string, {

@@ -10,7 +10,7 @@ const PORT: Number | String = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: "https://zippy-sprite-4f4938.netlify.app",
+    origin: "http://localhost:5173",
     credentials: true,
   })
 );
