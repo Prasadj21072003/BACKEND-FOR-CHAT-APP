@@ -18,6 +18,11 @@ app.use(
 app.use(cookieParser());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.json("hello");
+  console.log("hello");
+});
+
 app.use("/api/auth", authroutes);
 app.use("/api/message", messageroutes);
 

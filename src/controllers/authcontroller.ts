@@ -4,6 +4,10 @@ import bcryptjs from "bcryptjs";
 import { error } from "console";
 import jwt from "jsonwebtoken";
 
+export const get = (req: Request, res: Response) => {
+  res.json("hello");
+};
+
 export const signup = async (req: Request, res: Response) => {
   try {
     const { fullName, username, password, gender } = req.body;

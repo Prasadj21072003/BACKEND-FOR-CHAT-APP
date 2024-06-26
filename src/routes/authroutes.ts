@@ -1,5 +1,11 @@
 import express from "express";
-import { getme, login, logout, signup } from "../controllers/authcontroller.js";
+import {
+  getme,
+  login,
+  logout,
+  signup,
+  get,
+} from "../controllers/authcontroller.js";
 
 import Verify from "../Verify.js";
 
