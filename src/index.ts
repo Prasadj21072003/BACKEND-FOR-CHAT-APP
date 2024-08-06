@@ -10,7 +10,7 @@ const PORT: Number | String = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: "https://cozy-kangaroo-90c390.netlify.app",
+    origin: "https://frontend-chatapp-virid.vercel.app",
     credentials: true,
   })
 );
